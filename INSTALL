@@ -1,0 +1,41 @@
+add the following lines to the end of your LocalSettings.php
+
+include("extensions/Act.php");
+include("extensions/Scene.php");
+include("extensions/CharacterName.php");
+include("extensions/StageDirection.php");
+
+add the following css to your main and print style sheets (this differs by skin)
+
+.act {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding: .25em;
+}
+.scene {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding: .25em;
+}
+.stage-direction {
+    font-style: italic;
+    margin: 1em 1em 1em 2em;
+}
+.inline-stage-direction {
+    font-style: italic;
+}
+.character {
+    font-weight: bold;
+    text-align: center;
+}
+
+Then you can use the tags:
+
+<act>Act I</act>
+<scene>Scene I</scene>
+<c>Bob</c>
+Says something. <isd>Spits</isd> Says something else.
+
+<sd>Bob walks off stage</sd>
